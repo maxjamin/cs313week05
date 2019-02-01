@@ -37,8 +37,8 @@ catch (PDOException $ex)
 	  echo '<br/>';
 	}
 
-	$stmt = $db->prepare('SELECT * FROM Customer WHERE user=:maxjamin AND login=:password');
-	$stmt->execute(array(':user' => $user, ':login' => $login));
+	$stmt = $db->prepare('SELECT * FROM Customer ');
+	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
