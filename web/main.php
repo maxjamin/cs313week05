@@ -23,9 +23,12 @@ try
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo 'the url ' . $dbUrl . ' The host ' . $dbHost . ' Port ' . $dbPort . ' User ' . $dbUser . ' The password ' . $dbPassword . ' Path ' . $dbName;
-
+}
+catch (PDOException $ex)
+{
+  echo 'Error!: ' . $ex->getMessage();
+  die();
+}
 
   foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
@@ -33,12 +36,6 @@ try
 	  echo ' login ' . $row['login'];
 	  echo '<br/>';
 	}
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
 
 ?>
 
