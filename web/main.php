@@ -38,8 +38,8 @@ catch (PDOException $ex)
 	}
 
 	$stmt = $db->prepare('SELECT * FROM Customer');
-	$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-	$stmt->bindValue(':login', $login, PDO::PARAM_STR);
+	//$stmt->bindValue(':username', $username, PDO::PARAM_STR);
+	//$stmt->bindValue(':login', $login, PDO::PARAM_STR);
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
