@@ -27,7 +27,7 @@ try
   echo 'the url ' . $dbUrl . ' The host ' . $dbHost . ' Port ' . $dbPort . ' User ' . $dbUser . ' The password ' . $dbPassword . ' Path ' . $dbName;
 
 
-  foreach ($db->query('SELECT username, password FROM Customer') as $row)
+  foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
 	  echo 'user: ' . $row['username'];
 	  echo ' login ' . $row['login'];
