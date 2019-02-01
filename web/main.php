@@ -30,18 +30,18 @@ catch (PDOException $ex)
   die();
 }
 
-  foreach ($db->query('SELECT username, login FROM Customer') as $row)
+  	foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
 	  echo 'user: ' . $row['username'];
 	  echo ' login ' . $row['login'];
 	  echo '<br/>';
 	}
 
-	$stmt = $db->prepare('SELECT * FROM Customer');
-	//$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-	//$stmt->bindValue(':login', $login, PDO::PARAM_STR);
-	$stmt->execute();
+	$stmt = $db->prepare('SELECT * FROM Customer WHERE user=:user AND login=:login');
+	$stmt->execute(array(':user' => $user, ':login' => $login));
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 
 
 ?>
