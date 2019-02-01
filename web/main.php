@@ -47,7 +47,10 @@ catch (PDOException $ex)
 	$stmt = $db->prepare("SELECT username, login FROM Customer");
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	echo $rows;
+
+	foreach(new TableRows(new RecursiveArrayIterator($rows->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
 
 
 
