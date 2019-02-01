@@ -37,9 +37,17 @@ catch (PDOException $ex)
 	  echo '<br/>';
 	}
 
-	$stmt = $db->prepare('SELECT * FROM Customer ');
-	$stmt->execute();
+	foreach ($db->query('SELECT name, email FROM Artist') as $row)
+	{
+	  echo 'name: ' . $row['name'];
+	  echo ' Email ' . $row['email'];
+	  echo '<br/>';
+	}
+
+	$stmt = $db->prepare('SELECT * FROM Customer WHERE user=:user AND login=:login');
+	$stmt->execute(array(':user' => $user, ':login' => $login));
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 
