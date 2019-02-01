@@ -33,21 +33,21 @@ catch (PDOException $ex)
   	foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
 	  echo 'user: ' . $row['username'];
-	  echo ' login ' . $row['login'];
+	  echo ' login: ' . $row['login'];
 	  echo '<br/>';
 	}
 
 	foreach ($db->query('SELECT name, email FROM Artist') as $row)
 	{
 	  echo 'name: ' . $row['name'];
-	  echo ' Email ' . $row['email'];
+	  echo ' Email: ' . $row['email'];
 	  echo '<br/>';
 	}
 
 	$stmt = $db->prepare("SELECT username, login FROM Customer");
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+	echo $rows;
 
 
 
