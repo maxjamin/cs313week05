@@ -25,6 +25,14 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo 'the url ' . $dbUrl . ' The host ' . $dbHost . ' Port ' . $dbPort . ' User ' . $dbUser . ' The password ' . $dbPassword . ' Path ' . $dbName;
+
+
+  foreach ($db->query('SELECT username, password FROM Customer') as $row)
+	{
+	  echo 'user: ' . $row['username'];
+	  echo ' login ' . $row['login'];
+	  echo '<br/>';
+	}
 }
 catch (PDOException $ex)
 {
