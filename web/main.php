@@ -62,7 +62,7 @@
 		foreach($rows as $table){
     		if($name === $table['username'] && $password === $table['login'])
     		{
-    			echo 'Test 777 ' . $table['email'] . " " . $table['user_id'] ;
+    			//echo 'Test 777 ' . $table['email'] . " " . $table['user_id'] ;
     			$_SESSION["sessionUserName"] = $table['username'];
     			$_SESSION["sessionUserEmail"]= $table['email'];
     			$_SESSION["sessionUserId"]   = $table['user_id'];

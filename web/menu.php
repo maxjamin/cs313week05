@@ -51,6 +51,14 @@ catch (PDOException $ex)
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
+
+		$stmt = $db->prepare('SELECT * FROM Customer');
+		$stmt->execute();
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+		foreach($rows as $table){
+			echo 'Test 777 ' . $table['artwork_id'] . " " . $table['price'];
+		}
 	?>	
 
 
