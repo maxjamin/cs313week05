@@ -30,7 +30,11 @@ try
 	$stmt->bindValue(':login', $login, PDO::PARAM_STR);
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	echo $rows;
+	//echo $rows;
+
+	foreach(new TableRows(new RecursiveArrayIterator($rows->fetchAll())) as $k=>$v) {
+        echo $v;
+    }
 
 
 
