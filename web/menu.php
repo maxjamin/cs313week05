@@ -66,9 +66,11 @@ catch (PDOException $ex)
    		</tr>
   		<?php
 		foreach($rows as $table){
+			$image = /artWorkImages/$table['price'];
+
 			echo '<tr><td>' .  $table['name'] .
 				 "</td><td>" . $table['description'] .
-				 "</td><td>" . $table['linktoart'] .
+				 "</td><td>" . $image .
 				 "</td><td>" . $table['price'] .
 				'</td></tr>';
 		} ?>
