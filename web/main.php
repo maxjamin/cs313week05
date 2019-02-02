@@ -35,7 +35,7 @@ try
     	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
 	}
 	
-	*/
+	
 	echo 'Test<br/>';
 	$stmt = $db->prepare('SELECT username, login FROM Customer');
 	$stmt->execute();
@@ -44,7 +44,7 @@ try
 	foreach($rows as $table){
     	//Print the table name out onto the page.
     	echo $table['username'] . " " . $table['login'] . '<br>';
-	}
+	}*/
 
 }
 catch (PDOException $ex)
@@ -79,7 +79,7 @@ catch (PDOException $ex)
 	
 		foreach($rows as $table){
     		//Print the table name out onto the page.
-    		//echo $table['username'] . " " . $table['login'] . '<br>';
+    		echo $table['username'] . " " . $table['login'] . '<br>';
     		if(($name === $table['Username']) && ($password === $table['login']))
     		{
     			echo 'Test 777<br/>';
