@@ -23,14 +23,14 @@ try
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-   $stmt = $db->prepare("SELECT username, login FROM Customer");
+   /*$stmt = $db->prepare("SELECT username, login FROM Customer");
    $stmt->execute();
 
    // set the resulting array to associative
    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
         echo $v;
-   }
+   }*/
 
 
 }
