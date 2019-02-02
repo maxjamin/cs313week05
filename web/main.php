@@ -84,7 +84,7 @@
 	<br>
 
 	<?php
-		if($_SESSION["sessionUserName"] !== "") {
+		if(isset($_SESSION['sessionUserEmail'])) {
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
