@@ -1,7 +1,7 @@
 <?php
 	//Starting session
 	session_start();
-	$_SESSION["sessionUserName"] = "";
+	//$_SESSION["sessionUserName"] = "";
 	$_SESSION["table"] = 'true';
 ?>
 <!DOCTYPE html>
