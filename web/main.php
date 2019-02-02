@@ -30,6 +30,7 @@ try
 	$stmt->bindValue(':login', $name, PDO::PARAM_STR);
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	echo $rows . <br>;
 
 
 
