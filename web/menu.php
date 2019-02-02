@@ -34,17 +34,6 @@ catch (PDOException $ex)
   die();
 }
 
-?>
-	<h1>Gallery</h1>
-	<br>
-
-	<div class="navbar">
-		<a href="main.php">Login</a>
-  		<a href="cart.php">Cart</a>
-	</div>
-	<br>
-
-	<?php
 		if($_SESSION["sessionUserName"] !== "") {
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
@@ -56,9 +45,19 @@ catch (PDOException $ex)
 
 
 		//Add To Cart
-		echo $_POST["search"]; 
+		echo $_POST["search"];
 
-	?>	
+
+?>
+	<h1>Gallery</h1>
+	<br>
+
+	<div class="navbar">
+		<a href="main.php">Login</a>
+  		<a href="cart.php">Cart</a>
+	</div>
+	<br>
+
 
 
 	<table>
