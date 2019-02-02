@@ -54,7 +54,7 @@ catch (PDOException $ex)
 		}
 		
 		echo 'Test<br/>';
-		$stmt = $db->prepare('SELECT username, login FROM Customer');
+		$stmt = $db->prepare('SELECT * FROM Customer');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
