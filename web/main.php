@@ -26,7 +26,7 @@ try
 	$stmt = $db->prepare("SELECT username, login FROM Customer");
 	$stmt->execute();
 	$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  	echo results;
+  	echo $results;
 
 }
 catch (PDOException $ex)
