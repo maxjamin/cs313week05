@@ -27,11 +27,11 @@ try
 
 	$stmt = $db->prepare('SELECT * FROM Customer');
 	$stmt->execute();
-	$rows = $stmt->fetchAll(PDO::FETCH);
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	foreach($rows as $table){
     //Print the table name out onto the page.
-    echo $table['username'], '<br>';
+    echo $table[0], '<br>';
 }
 
 
