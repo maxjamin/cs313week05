@@ -63,6 +63,7 @@ catch (PDOException $ex)
    			<td>Description</td>
    			<td>Image:</td>
    			<td>Price:</td>
+   			<td>Add</td>
    		</tr>
   		<?php
 		foreach($rows as $table){
@@ -72,7 +73,11 @@ catch (PDOException $ex)
 			echo '<tr><td>' .  $table['name'] .
 				"</td><td>" . $table['description'] .
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
-				 "</td><td>" . $table['price'] .
+				"</td><td>" . $table['price'] .
+				"</td><td>" . 
+				"<form>
+					<input type='text' name='addToCart'><br>
+				</form>" . 
 				'</td></tr>';
 		} ?>
 
