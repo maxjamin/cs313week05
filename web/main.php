@@ -54,8 +54,8 @@ catch (PDOException $ex)
 ?>
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		UserName:<input type="text" name="userNameEntered">Enter Username<br>
-		Password:<input type="text" name="passwordEntered">Enter Password<br>
+		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered"><br>
+		Password:<input type="text" Enter Username="Enter Password" name="passwordEntered">Enter Password<br>
 		<input type="submit" name="entered" value="submit">
 	
 
@@ -64,6 +64,12 @@ catch (PDOException $ex)
     		<span class="passwordF">Forgot <a href="#">password?</a></span>
   		</div>
 	</form>
+
+<?php 
+echo "Test01";
+
+?>
+
 
 </body>
 </html> 
