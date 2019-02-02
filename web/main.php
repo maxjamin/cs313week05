@@ -81,6 +81,12 @@ catch (PDOException $ex)
 	</div>
 	<br>
 
+	<?php
+		echo "User: " . $_SESSION["sessionUserName"] . '<br>';
+		echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br>';
+
+	?>
+
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
