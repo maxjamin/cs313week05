@@ -75,7 +75,7 @@ catch (PDOException $ex)
 	<br>
 
 	<div class="navbar">
-  		<a href="menu.php">Home</a>
+  		<a href="menu.php">Gallery</a>
   		<a href="cart.php">Cart</a>
  		<a href="checkout.php">Checkout</a> 
 	</div>
