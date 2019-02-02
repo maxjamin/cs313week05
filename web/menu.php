@@ -71,7 +71,7 @@ catch (PDOException $ex)
 
 			echo '<tr><td>' .  $table['name'] .
 				"</td><td>" . $table['description'] .
-				"</td><td>" . "<img src=$image width="50" height="60">" .
+				"</td><td>" . "<img src=$image width='50' height='60'>" .
 				 "</td><td>" . $table['price'] .
 				'</td></tr>';
 		} ?>
