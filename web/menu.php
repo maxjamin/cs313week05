@@ -56,7 +56,7 @@ catch (PDOException $ex)
 
 
 		//Add To Cart
-		function addToCart()
+		function addToCart(var x)
 		{
 			echo "add to Cart";
 		}
@@ -82,7 +82,7 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
-				"<input type='button' name='addToCart' onclick='addtoCart()' value='Add to Cart'>" . 
+				"<input type='button' name='addToCart' onclick='addToCart($table['artwork_id'])' value='Add to Cart'>" . 
 				'</td></tr>';
 		} ?>
 
