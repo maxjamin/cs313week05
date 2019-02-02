@@ -54,7 +54,7 @@ catch (PDOException $ex)
 ?>
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		UserName:<input type="text" name="userNameEntered">
+		UserName:<input type="text" name="userNameEntered"><br>
 		Password:<input type="text" name="passwordEntered">
 	</form>
 
