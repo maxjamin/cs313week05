@@ -25,7 +25,7 @@ try
 
 
 
-	$stmt = $db->prepare('SELECT * FROM Artwork');
+	/*$stmt = $db->prepare('SELECT * FROM Artwork');
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
@@ -43,35 +43,22 @@ try
 	foreach($rows as $table){
     	//Print the table name out onto the page.
     	echo $table['username'] . " " . $table['login'] . '<br>';
-	}
+	}*/
 
 }
 catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}
-	
-  	/*foreach ($db->query('SELECT username, login FROM Customer') as $row)
-	{
-	  echo 'user: ' . $row['username'];
-	  echo ' login: ' . $row['login'];
-	  echo '<br/>';
-	}
-
-	foreach ($db->query('SELECT name, email FROM Artist') as $row)
-	{
-	  echo 'name: ' . $row['name'];
-	  echo ' Email: ' . $row['email'];
-	  echo '<br/>';
-	}*/
-
-
-
-
-
-
+}	
 ?>
+
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		UserName:<input type="text" name="userNameEntered">
+		Password:<input type="text" name="passwordEntered">
+	</form>
+
+
 
 </body>
 </html> 
