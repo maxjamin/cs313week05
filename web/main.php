@@ -34,6 +34,7 @@ try
     	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
 	}
 
+
 	echo 'Test<br/>';
 	$stmt = $db->prepare('SELECT username, login FROM Customer');
 	$stmt->execute();
