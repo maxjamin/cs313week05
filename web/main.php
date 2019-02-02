@@ -89,16 +89,7 @@
 		}
 	?>
 
-	<script>
-		function hidetable() {
-			var table = document.getElementById("table");
-			table.style.visibility = 'hidden';
-			table.style.display = 'none';
-		}
-	</script>
-
-
-	<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onclick="hidetable()">
+	<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
 		<span class="error"><?php echo $nameError;?></span><br>
 		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
