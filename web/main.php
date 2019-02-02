@@ -6,6 +6,7 @@
 <body>
 
 <h1>05 Prove</h1>
+<br>
 
 <?php 
 
@@ -25,15 +26,16 @@ try
 
 
 
-	/*$stmt = $db->prepare('SELECT * FROM Artwork');
+	$stmt = $db->prepare('SELECT * FROM Artwork');
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
+	/*
 	foreach($rows as $table){
     	//Print the table name out onto the page.
     	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
 	}
-
+	*/
 
 	echo 'Test<br/>';
 	$stmt = $db->prepare('SELECT username, login FROM Customer');
@@ -43,7 +45,7 @@ try
 	foreach($rows as $table){
     	//Print the table name out onto the page.
     	echo $table['username'] . " " . $table['login'] . '<br>';
-	}*/
+	}
 
 }
 catch (PDOException $ex)
@@ -73,13 +75,13 @@ catch (PDOException $ex)
 ?>
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered"><br>
-		<span class="error"><?php echo $nameError;?></span>
+		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
+		<span class="error"><?php echo $nameError;?></span><br>
 		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">Enter Password<br>
 		<span class="error"><?php echo $passError;?></span>
 		<input type="submit" name="entered" value="submit">
 	
-
+		<br><br>
 		<div class="container" style="background-color:#f1f1f1">
     		<button type="button" class="cancelbutton">Cancel</button>
     		<span class="passwordF">Forgot <a href="#">password?</a></span>
