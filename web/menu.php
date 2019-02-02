@@ -78,7 +78,7 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
-				"<form id = 'table' method='post' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
+				"<form>
 					<input type='button' name='addToCart' value='Add to Cart'>
 				</form>" . 
 				'</td></tr>';
