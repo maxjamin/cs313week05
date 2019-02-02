@@ -64,7 +64,7 @@ catch (PDOException $ex)
 			echo "Test name" . $name;
 		}
 		
-		}
+		
 		if(empty($_POST["passwordEntered"])) {
 			$passError = "Please enter a username";
 		}else {
@@ -81,7 +81,7 @@ catch (PDOException $ex)
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
 		<span class="error"><?php echo $nameError;?></span><br>
 		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">Enter Password<br>
-		<span class="error"><?php echo $passError;?></span>
+		<span class="error"><?php echo $passError;?></span><br>
 		<input type="submit" name="entered" value="submit">
 	
 		<br><br>
