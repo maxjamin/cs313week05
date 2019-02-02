@@ -90,7 +90,7 @@
 		}
 	?>
 
-	<?php if($_SESSION["table"] !== "false") : ?>
+	<?php if($_SESSION["table"] === "true") : ?>
 
 		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
