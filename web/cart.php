@@ -40,7 +40,8 @@ catch (PDOException $ex)
 
 	<div class="navbar">
 		<a href="main.php">Login</a>
-  		<a href="cart.php">Cart</a>
+  		<a href="menu.php">Menu</a>
+ 		<a href="checkout.php">Checkout</a> 
 	</div>
 	<br>
 
