@@ -76,7 +76,7 @@ catch (PDOException $ex)
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
 				"<form>
-					<input type='text' name='addToCart'><br>
+					<input type='button' name='addToCart'><br>
 				</form>" . 
 				'</td></tr>';
 		} ?>
