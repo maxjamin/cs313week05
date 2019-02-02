@@ -75,7 +75,7 @@ catch (PDOException $ex)
   		<?php
 		foreach($rows as $table){
 			$image = "artWorkImages/" . $table['linktoart'];
-			$id = $table['linktoart'];
+			$id = $table['artwork_id'];
 			//"<img src='artWorkImages/weather.jpeg' >"
 
 			echo '<tr><td>' .  $table['name'] .
@@ -85,6 +85,7 @@ catch (PDOException $ex)
 				"</td><td>";
 				?>
 				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<input value="<?php echo $id;?>" type="hidden" name="search">
 					<input type="submit" name="AddToCart" value="Add to Cart">
 				</form>
 
