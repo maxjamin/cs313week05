@@ -56,7 +56,7 @@ catch (PDOException $ex)
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	?>	
 
-
+  
 	<table>
   		<tr>
     		<td>Name:</td>
