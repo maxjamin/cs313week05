@@ -78,16 +78,20 @@ catch (PDOException $ex)
 			$id = $table['linktoart'];
 			//"<img src='artWorkImages/weather.jpeg' >"
 
-			echo '<tr><td>' .  $table['name'] .
+			echo "<tr><td>" .  $table['name'] .
 				"</td><td>" . $table['description'] .
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
-				"</td><td>"; ?>
+				"</td><td>"; 
+		?>
+				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<input type="submit" value="Add">
+				</form>
 
-
-				<?php
+		<?php
 				echo '</td></tr>';
-		} ?>
+				} 
+		?>
 
 	</table>
 
