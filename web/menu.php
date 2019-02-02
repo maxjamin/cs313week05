@@ -59,12 +59,18 @@ catch (PDOException $ex)
 
 	<table>
   		<tr>
-    		<td>Name</td>
-   			<td>Filter ID</td>
+    		<td>Name:</td>
+   			<td>Description</td>
+   			<td>Image:</td>
+   			<td>Artist ID:</td>
    		</tr>
   		<?php
 		foreach($rows as $table){
-			echo '<tr><td>' . $table['artwork_id'] . "</td><td>" . $table['price'] . '</td></tr>';
+			echo '<tr><td>' .  $table['name'] .
+				 "</td><td>" . $table['description'] .
+				 "</td><td>" . $table['linktoart'] .
+				 "</td><td>" . $table['price'] .
+				'</td></tr>';
 		} ?>
 
 
