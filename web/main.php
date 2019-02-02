@@ -74,6 +74,13 @@ catch (PDOException $ex)
 	<h1>05 Prove</h1>
 	<br>
 
+	<div class="navbar">
+  		<a href="menu.php">Home</a>
+  		<a href="cart.php">Cart</a>
+ 		<a href="checkout.php">Checkout</a> 
+	</div>
+	<br>
+
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
