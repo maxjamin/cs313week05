@@ -2,7 +2,7 @@
 	//Starting session
 	session_start();
 	//$_SESSION["sessionUserName"] = "";
-	$_SESSION["table"] = 'true';
+	//$_SESSION["table"] = 'true';
 ?>
 <!DOCTYPE html>
 <html>
