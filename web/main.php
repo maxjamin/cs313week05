@@ -80,7 +80,7 @@ catch (PDOException $ex)
 		foreach($rows as $table){
     		//Print the table name out onto the page.
     		//echo $table['username'] . " " . $table['login'] . '<br>';
-    		if(($name == $table['Username']) && ($password == $table['login']))
+    		if(($name === $table['Username']) && ($password === $table['login']))
     		{
     			echo 'Test 777<br/>';
     		}
@@ -94,7 +94,7 @@ catch (PDOException $ex)
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
 		<span class="error"><?php echo $nameError;?></span><br>
-		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">Enter Password<br>
+		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
 		<span class="error"><?php echo $passError;?></span><br>
 		<input type="submit" name="entered" value="submit">
 	
