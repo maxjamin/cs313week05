@@ -25,12 +25,14 @@ try
 
 
 
-	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:username AND login=:login');
-	$stmt->bindValue(':username', $username, PDO::PARAM_STR);
-	$stmt->bindValue(':login', $login, PDO::PARAM_STR);
+	$stmt = $db->prepare('SELECT * FROM Customer ');
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	echo $rows->fetchAll();
+	
+	foreach($rows as $table){
+    //Print the table name out onto the page.
+    echo $table[0], '<br>';
+}
 
 
 
