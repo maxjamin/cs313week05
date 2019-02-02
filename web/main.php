@@ -23,7 +23,7 @@ try
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-	$stmt = $db->prepare("SELECT username, login FROM Customer");
+	$stmt = $db->prepare('SELECT username, login FROM Customer');
 	$stmt->execute();
 	$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
   	echo $results;
