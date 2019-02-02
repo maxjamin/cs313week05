@@ -86,7 +86,7 @@ catch (PDOException $ex)
 				?>
 
 				<?php 
-				"<input type='button' name='addToCart' onclick='addToCart()' value='Add to Cart'>" . 
+				echo "<input type='button' name='addToCart' onclick='addToCart()' value='Add to Cart'>" . 
 				'</td></tr>';
 		} ?>
 
