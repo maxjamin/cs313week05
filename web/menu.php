@@ -83,9 +83,11 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
-				"<input type='button' name='addToCart'"?> php onclick='addToCart($id)'<?php"value='Add to Cart'>" . 
+				"<input type='button' name='addToCart' onclick='addToCart($id)' value='Add to Cart'>" . 
 				'</td></tr>';
 		} ?>
+
+	</table>
 
 
 
