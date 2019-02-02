@@ -1,3 +1,8 @@
+<?php
+	//Starting session
+	session_start();
+	$_SESSION["sessionUserName"] = "";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +12,6 @@
 </head>
 <body>
 <?php 
-
-//Starting session
-session_start();
-$_SESSION["sessionUserName"] = "";
 
 try
 {
