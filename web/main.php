@@ -13,26 +13,26 @@
 <body>
 <?php 
 
-try
-{
-	$dbUrl = getenv('DATABASE_URL');
-	$dbOpts = parse_url($dbUrl);
+	try
+	{
+		$dbUrl = getenv('DATABASE_URL');
+		$dbOpts = parse_url($dbUrl);
 
-	$dbHost = $dbOpts["host"];
-	$dbPort = $dbOpts["port"];
-	$dbUser = $dbOpts["user"];
-	$dbPassword = $dbOpts["pass"];
-	$dbName = ltrim($dbOpts["path"],'/');
+		$dbHost = $dbOpts["host"];
+		$dbPort = $dbOpts["port"];
+		$dbUser = $dbOpts["user"];
+		$dbPassword = $dbOpts["pass"];
+		$dbName = ltrim($dbOpts["path"],'/');
 
- 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-  	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	  	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
+	}
+	catch (PDOException $ex)
+	{
+	  echo 'Error!: ' . $ex->getMessage();
+	  die();
+	}
 
 	$nameError = $passError = "";
 	$name = $password = "";
@@ -89,8 +89,16 @@ catch (PDOException $ex)
 		}
 	?>
 
+	<script>
+		function hidetable() {
+			var table = document.getElementById("table");
+			table.style.visibility = 'hidden';
+			table.style.display = 'none';
+		}
+	</script>
 
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+	<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onclick="hidetable()">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
 		<span class="error"><?php echo $nameError;?></span><br>
 		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
