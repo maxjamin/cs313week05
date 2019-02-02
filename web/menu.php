@@ -78,9 +78,9 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
-				"
+				"<form>
 					<input type='button' name='addToCart' value='Add to Cart'>
-				" . 
+				</from>" . 
 				'</td></tr>';
 		} ?>
 
