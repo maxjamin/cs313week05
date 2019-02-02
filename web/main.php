@@ -4,14 +4,11 @@
 <title>05 Prove</title>
 </head>
 <body>
-
-<h1>05 Prove</h1>
-<br>
-
 <?php 
 
 //Starting session
 session_start();
+$_SESSION["sessionUserName"] = "";
 
 try
 {
@@ -53,7 +50,7 @@ catch (PDOException $ex)
 			//echo "Test name" . $password;
 		}
 		
-		echo 'Test<br/>';
+		//echo 'Test<br/>';
 		$stmt = $db->prepare('SELECT * FROM Customer');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -61,7 +58,7 @@ catch (PDOException $ex)
 		foreach($rows as $table){
     		if($name === $table['username'] && $password === $table['login'])
     		{
-    			echo 'Test 777 ' . $table['email'] . " " . $table['user_id'] ;
+    			//echo 'Test 777 ' . $table['email'] . " " . $table['user_id'] ;
     			$_SESSION["sessionUserName"] = $table['username'];
     			$_SESSION["sessionUserEmail"]= $table['email'];
     			$_SESSION["sessionUserId"]   = $table['user_id'];
@@ -71,8 +68,10 @@ catch (PDOException $ex)
 
 	}
 
-
 ?>
+	<h1>05 Prove</h1>
+	<br>
+
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
