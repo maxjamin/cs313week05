@@ -70,7 +70,7 @@ catch (PDOException $ex)
 
 			echo '<tr><td>' .  $table['name'] .
 				"</td><td>" . $table['description'] .
-				"</td><td>" . ?><img src="/artWorkImages/weather.jpeg" border=3 height=100 width=300></img><?php .
+				"</td><td>" . echo "<img src='artWorkImages/weather.jpeg' >" .
 				 "</td><td>" . $table['price'] .
 				'</td></tr>';
 		} ?>
