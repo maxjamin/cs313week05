@@ -81,7 +81,7 @@ catch (PDOException $ex)
     		//Print the table name out onto the page.
     		echo $table['username'] . " " . $table['login'] . '<br>';
     		echo $name . " " . $password . '<br>';
-    		if($name === $table['Username'] && $password === $table['login'])
+    		if($name === $table['username'] && $password === $table['login'])
     		{
     			echo 'Test 777';
     		}
