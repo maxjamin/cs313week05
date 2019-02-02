@@ -34,7 +34,7 @@ try
     	//Print the table name out onto the page.
     	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
 	}
-	*/
+	
 
 	echo 'Test<br/>';
 	$stmt = $db->prepare('SELECT username, login FROM Customer');
@@ -44,7 +44,7 @@ try
 	foreach($rows as $table){
     	//Print the table name out onto the page.
     	echo $table['username'] . " " . $table['login'] . '<br>';
-	}
+	}*/
 
 }
 catch (PDOException $ex)
@@ -57,20 +57,20 @@ catch (PDOException $ex)
 	$name = $password = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		/*if(empty($_POST["userNameEntered"])) {
+		if(empty($_POST["userNameEntered"])) {
 			$nameError = "Please enter a username";
 		}else {
 			$name = $_POST["userNameEntered"];
 			echo "Test name" . $name;
 		}
-
+		
 		}
 		if(empty($_POST["passwordEntered"])) {
-			$nameError = "Please enter a username";
+			$passError = "Please enter a username";
 		}else {
 			$password = $_POST["passwordEntered"];
 			echo "Test name" . $password;
-		}*/
+		}
 
 	}
 
