@@ -61,7 +61,7 @@ catch (PDOException $ex)
 			$nameError = "Please enter a username";
 		}else {
 			$name = $_POST["userNameEntered"];
-			echo "Test name" . $name . "<br>";
+			echo "Test name" . $name;
 	}
 
 		}
@@ -69,7 +69,7 @@ catch (PDOException $ex)
 			$nameError = "Please enter a username";
 		}else {
 			$password = $_POST["passwordEntered"];
-			echo "Test name" . $password . "<br>";
+			echo "Test name" . $password;
 		}
 
 	}
