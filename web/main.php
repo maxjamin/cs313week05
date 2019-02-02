@@ -31,7 +31,7 @@ try
 	
 	foreach($rows as $table){
     //Print the table name out onto the page.
-    echo $table[0], '<br>';
+    echo $table['username'], '<br>';
 }
 
 
