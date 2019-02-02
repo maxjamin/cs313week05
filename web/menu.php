@@ -83,10 +83,6 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>"; 
-		?>
-
-
-		<?php
 				echo "</td></tr>";
 				} 
 		?>
