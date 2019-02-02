@@ -34,8 +34,8 @@ try
     	echo $table['username'] . " " . $table['login'] . '<br>';
 	}
 
-	echo 'Test';
-	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:maxer AND login=:password');
+	echo 'Test<br/>';
+	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:username AND login=:login');
 	$stmt->execute(array(':username=' => $username, ':login' => $login));
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
