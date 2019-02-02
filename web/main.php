@@ -35,13 +35,14 @@ try
 	}
 
 	echo 'Test<br/>';
-	$stmt = $db->prepare("SELECT username, login FROM Customer");
+	$stmt = $db->prepare('SELECT username, login FROM Customer');
 	$stmt->execute();
-
-	$rows = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-	foreach(new TableRows(new RecursiveArrayIterator($rows->fetchAll())) as $k=>$v) {
-        echo $v;
-    }
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($rows as $table){
+    	//Print the table name out onto the page.
+    	echo $table['username'] . " " . $table['login'] . '<br>';
+	}
 
 }
 catch (PDOException $ex)
