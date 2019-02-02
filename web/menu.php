@@ -1,3 +1,7 @@
+<?php	
+	//Starting session
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,6 +48,13 @@ catch (PDOException $ex)
  		<a href="checkout.php">Checkout</a> 
 	</div>
 	<br>
+
+	<?php
+		if($_SESSION["sessionUserName"] !== "") {
+			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
+			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
+		}
+	?>	
 
 
 
