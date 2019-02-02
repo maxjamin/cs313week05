@@ -30,11 +30,19 @@ try
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	foreach($rows as $table){
-    //Print the table name out onto the page.
-    echo $table['username'] . " " . $table['login'] . '<br>';
-}
+    	//Print the table name out onto the page.
+    	echo $table['username'] . " " . $table['login'] . '<br>';
+	}
 
+	echo 'Test';
+	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:maxer AND login=:password');
+	$stmt->execute(array(':username=' => $username, ':login' => $login));
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+	foreach($rows as $table){
+    	//Print the table name out onto the page.
+    	echo $table['username'] . " " . $table['login'] . '<br>';
+    }
 
 }
 catch (PDOException $ex)
