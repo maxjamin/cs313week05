@@ -56,10 +56,7 @@ catch (PDOException $ex)
 
 
 		//Add To Cart
-		function addToCart()
-		{
-			echo "add to Cart";
-		}
+		echo $_POST["search"]; 
 
 	?>	
 
