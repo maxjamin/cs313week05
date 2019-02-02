@@ -57,12 +57,12 @@ catch (PDOException $ex)
 	$name = $password = "";
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		if(empty($_POST["userNameEntered"])) {
+		/*if(empty($_POST["userNameEntered"])) {
 			$nameError = "Please enter a username";
 		}else {
 			$name = $_POST["userNameEntered"];
 			echo "Test name" . $name;
-	}
+		}
 
 		}
 		if(empty($_POST["passwordEntered"])) {
@@ -70,7 +70,7 @@ catch (PDOException $ex)
 		}else {
 			$password = $_POST["passwordEntered"];
 			echo "Test name" . $password;
-		}
+		}*/
 
 	}
 
