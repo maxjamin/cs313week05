@@ -84,6 +84,9 @@ catch (PDOException $ex)
 				"</td><td>" . $table['price'] .
 				"</td><td>";
 				?>
+				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<input type="submit" name="AddToCart" value="submit">
+				</form>
 
 				<?php 
 				echo '</td></tr>';
