@@ -83,7 +83,7 @@ catch (PDOException $ex)
     		echo $name . " " . $password . '<br>';
     		if(($name == $table['Username']) && ($password == $table['login']))
     		{
-    			echo 'Test 777<br/>';
+    			echo 'Test 777';
     		}
 		}
 
