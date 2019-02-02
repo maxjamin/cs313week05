@@ -82,9 +82,10 @@ catch (PDOException $ex)
 	<br>
 
 	<?php
-		echo "User: " . $_SESSION["sessionUserName"] . '<br>';
-		echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br>';
-
+		if($_SESSION["sessionUserName"] !== "") {
+			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
+			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
+		}
 	?>
 
 
