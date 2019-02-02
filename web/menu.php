@@ -40,7 +40,6 @@ catch (PDOException $ex)
 
 	<div class="navbar">
 		<a href="main.php">Login</a>
-  		<a href="menu.php">Gallery</a>
   		<a href="cart.php">Cart</a>
  		<a href="checkout.php">Checkout</a> 
 	</div>
@@ -55,11 +54,18 @@ catch (PDOException $ex)
 		$stmt = $db->prepare('SELECT * FROM Artwork');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	
-		foreach($rows as $table){
-			echo 'Test 777 ' . $table['artwork_id'] . " " . $table['price'];
-		}
 	?>	
+
+
+	<table>
+  		<tr>
+    		<td>Filter Name</td>
+   			<td>Filter ID</td>
+   		</tr>
+  		<?php
+		foreach($rows as $table){
+			echo '<tr><td>' . $table['artwork_id'] . "</td><td>" . $table['price'] . '</td></tr>';
+		} ?>
 
 
 
