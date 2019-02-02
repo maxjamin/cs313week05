@@ -75,7 +75,7 @@ catch (PDOException $ex)
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered"><br>
 		<span class="error"><?php echo $nameError;?></span>
-		Password:<input type="text" Enter Username="Enter Password" name="passwordEntered">Enter Password<br>
+		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">Enter Password<br>
 		<span class="error"><?php echo $passError;?></span>
 		<input type="submit" name="entered" value="submit">
 	
