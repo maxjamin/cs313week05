@@ -59,7 +59,7 @@ catch (PDOException $ex)
 
 	<table>
   		<tr>
-    		<td>Filter Name</td>
+    		<td>Name</td>
    			<td>Filter ID</td>
    		</tr>
   		<?php

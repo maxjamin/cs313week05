@@ -16,3 +16,11 @@
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightBlue;
+}
+th, td {
+    padding: 5px;
