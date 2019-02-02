@@ -50,11 +50,26 @@ catch (PDOException $ex)
 {
   echo 'Error!: ' . $ex->getMessage();
   die();
-}	
+}
+
+	$nameError = $passWord = "";
+	$name = $password = "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		if(empty($_POST["userNameEntered"])) {
+			$nameError = "Please enter a username";
+		}else {
+			echo "Test name"
+		}
+
+	}
+
+
 ?>
 
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered"><br>
+		<span class="error">* <?php echo $nameError;?></span>
 		Password:<input type="text" Enter Username="Enter Password" name="passwordEntered">Enter Password<br>
 		<input type="submit" name="entered" value="submit">
 	
@@ -64,11 +79,6 @@ catch (PDOException $ex)
     		<span class="passwordF">Forgot <a href="#">password?</a></span>
   		</div>
 	</form>
-
-<?php 
-echo "Test01";
-
-?>
 
 
 </body>
