@@ -1,8 +1,8 @@
 <?php
 	//Starting session
 	session_start();
-	//$_SESSION["sessionUserName"] = "";
-	//$_SESSION["table"] = true;
+	$_SESSION["sessionUserName"] = "";
+	$_SESSION["table"] = true;
 ?>
 <!DOCTYPE html>
 <html>
@@ -90,7 +90,7 @@
 		}
 	?>
 
-	<?php if(isset($_SESSION["sessionUserName"])) : ?>
+	<?php if($_SESSION["table"] == true) : ?>
 
 		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
