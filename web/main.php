@@ -84,13 +84,13 @@
 	<br>
 
 	<?php
-		if(isset($_SESSION['sessionUserEmail'])) {
+		if($_SESSION["sessionUserName"] !== "") {
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
 	?>
 
-	<?php if($_SESSION["table"] == "false") : ?>
+	<?php if($_SESSION["table"] !== "false") ?>
 
 		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
