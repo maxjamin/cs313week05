@@ -79,7 +79,7 @@ catch (PDOException $ex)
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
 				"<form id = 'table' method='post' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>'>
-					<input type='button' name='addToCart' value='Add to Cart'><br>
+					<input type='button' name='addToCart' value='Add to Cart'>
 				</form>" . 
 				'</td></tr>';
 		} ?>
