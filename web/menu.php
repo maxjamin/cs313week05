@@ -69,8 +69,8 @@ catch (PDOException $ex)
 			$image = "/artWorkImages/" . $table['linktoart'];
 
 			echo '<tr><td>' .  $table['name'] .
-				 "</td><td>" . $table['description'] .
-				/* "</td><td>" . ?><img src=$image border=3 height=100 width=300></img><?php .*/
+				"</td><td>" . $table['description'] .
+				"</td><td>" . ?><img src="/artWorkImages/weather.jpeg" border=3 height=100 width=300></img><?php .
 				 "</td><td>" . $table['price'] .
 				'</td></tr>';
 		} ?>
