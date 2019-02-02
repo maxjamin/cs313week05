@@ -56,6 +56,10 @@ catch (PDOException $ex)
 
 
 		//Add To Cart
+		function addToCart()
+		{
+			echo "add to Cart";
+		}
 
 	?>	
 
@@ -78,9 +82,7 @@ catch (PDOException $ex)
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
 				"</td><td>" . 
-				"<form method action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>'>
-					<input type='button' name='addToCart' value='Add to Cart'>
-				</from>" . 
+				"<input type='button' name='addToCart' onclick=AddtoCart()value='Add to Cart'>" . 
 				'</td></tr>';
 		} ?>
 
