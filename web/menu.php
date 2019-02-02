@@ -52,7 +52,7 @@ catch (PDOException $ex)
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
 
-		$stmt = $db->prepare('SELECT * FROM Customer');
+		$stmt = $db->prepare('SELECT * FROM Artwork');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
