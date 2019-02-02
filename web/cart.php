@@ -55,30 +55,9 @@ catch (PDOException $ex)
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	?>	
-  
-	<table>
-  		<tr>
-    		<td>Name:</td>
-   			<td>Description</td>
-   			<td>Image:</td>
-   			<td>Price:</td>
-   			<td>Add</td>
-   		</tr>
-  		<?php
-		foreach($rows as $table){
-			$image = "artWorkImages/" . $table['linktoart'];
-			//"<img src='artWorkImages/weather.jpeg' >"
 
-			echo '<tr><td>' .  $table['name'] .
-				"</td><td>" . $table['description'] .
-				"</td><td>" . "<img src=$image width='150' height='150'>" .
-				"</td><td>" . $table['price'] .
-				"</td><td>" . 
-				"<form>
-					<input type='button' name='addToCart' value='Add to Cart'><br>
-				</form>" . 
-				'</td></tr>';
-		} ?>
+	
+
 
 
 
