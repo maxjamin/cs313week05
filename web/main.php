@@ -80,7 +80,7 @@ catch (PDOException $ex)
 		foreach($rows as $table){
     		//Print the table name out onto the page.
     		echo $table['username'] . " " . $table['login'] . '<br>';
-    		echo $name . " " . $password '<br>';
+    		echo $name . " " . $password . '<br>';
     		if(($name === $table['Username']) && ($password === $table['login']))
     		{
     			echo 'Test 777<br/>';
