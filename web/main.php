@@ -11,18 +11,28 @@
 
 try
 {
-  $dbUrl = getenv('DATABASE_URL');
+	$dbUrl = getenv('DATABASE_URL');
+	$dbOpts = parse_url($dbUrl);
 
-  $dbOpts = parse_url($dbUrl);
+	$dbHost = $dbOpts["host"];
+	$dbPort = $dbOpts["port"];
+	$dbUser = $dbOpts["user"];
+	$dbPassword = $dbOpts["pass"];
+	$dbName = ltrim($dbOpts["path"],'/');
 
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
+ 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+  	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:username AND login=:login');
+	$stmt->bindValue(':username', $id, PDO::PARAM_STR);
+	$stmt->bindValue(':login', $name, PDO::PARAM_STR);
+	$stmt->execute();
+	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
 
 }
 catch (PDOException $ex)
@@ -30,7 +40,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 }
-
+	
   	foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
 	  echo 'user: ' . $row['username'];
