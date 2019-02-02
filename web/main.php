@@ -25,13 +25,13 @@ try
 
 
 
-	$stmt = $db->prepare('SELECT * FROM Customer');
+	$stmt = $db->prepare('SELECT * FROM Artwork');
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	foreach($rows as $table){
     	//Print the table name out onto the page.
-    	echo $table['username'] . " " . $table['login'] . '<br>';
+    	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
 	}
 
 	echo 'Test<br/>';
@@ -51,7 +51,7 @@ catch (PDOException $ex)
   die();
 }
 	
-  	foreach ($db->query('SELECT username, login FROM Customer') as $row)
+  	/*foreach ($db->query('SELECT username, login FROM Customer') as $row)
 	{
 	  echo 'user: ' . $row['username'];
 	  echo ' login: ' . $row['login'];
@@ -63,7 +63,7 @@ catch (PDOException $ex)
 	  echo 'name: ' . $row['name'];
 	  echo ' Email: ' . $row['email'];
 	  echo '<br/>';
-	}
+	}*/
 
 
 
