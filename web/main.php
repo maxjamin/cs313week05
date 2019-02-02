@@ -58,7 +58,8 @@
 		$stmt = $db->prepare('SELECT * FROM Customer');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	
+		
+		$found = 0;
 		foreach($rows as $table){
     		if($name === $table['username'] && $password === $table['login'])
     		{
@@ -67,9 +68,10 @@
     			$_SESSION["sessionUserEmail"]= $table['email'];
     			$_SESSION["sessionUserId"]   = $table['user_id'];
     			$_SESSION["table"] = 'false';
+    			$found = 1;
     		}
 		}
-		if($_SESSION["table"] === 'true' && $_POST["userNameEntered"] && $_POST["passwordEntered"])
+		if($found === 0 && $_POST["userNameEntered"] && $_POST["passwordEntered"])
 		{
 			$nameError = "Please enter a real username";
 			$passError = "Please enter a real password";
