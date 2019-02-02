@@ -61,7 +61,7 @@ catch (PDOException $ex)
 			$nameError = "Please enter a username";
 		}else {
 			$name = $_POST["userNameEntered"];
-			echo "Test name" . $name;
+			//echo "Test name" . $name;
 		}
 		
 		
@@ -69,7 +69,21 @@ catch (PDOException $ex)
 			$passError = "Please enter a username";
 		}else {
 			$password = $_POST["passwordEntered"];
-			echo "Test name" . $password;
+			//echo "Test name" . $password;
+		}
+		
+		echo 'Test<br/>';
+		$stmt = $db->prepare('SELECT username, login FROM Customer');
+		$stmt->execute();
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	
+		foreach($rows as $table){
+    		//Print the table name out onto the page.
+    		//echo $table['username'] . " " . $table['login'] . '<br>';
+    		if(($name == $table['Username']) && ($password == $table['login']))
+    		{
+    			echo 'Test 777<br/>';
+    		}
 		}
 
 	}
