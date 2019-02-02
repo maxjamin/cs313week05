@@ -69,6 +69,11 @@
     			$_SESSION["table"] = 'false';
     		}
 		}
+		if($_SESSION["table"] === 'true')
+		{
+			$nameError = "Please enter a real username";
+			$passError = "Please enter a real password";
+		}
 
 	}
 
