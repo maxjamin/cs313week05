@@ -85,6 +85,12 @@ catch (PDOException $ex)
 				"</td><td>"; 
 		?>
 
+
+		<?php
+				echo "</td></tr>";
+				} 
+		?>
+
 	</table>
 
 
