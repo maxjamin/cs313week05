@@ -59,7 +59,7 @@ catch (PDOException $ex)
 		if(empty($_POST["userNameEntered"])) {
 			$nameError = "Please enter a username";
 		}else {
-			echo "Test name"
+			echo "Test name";
 		}
 
 	}
