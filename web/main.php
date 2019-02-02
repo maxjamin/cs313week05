@@ -26,8 +26,8 @@ try
 
 
 	$stmt = $db->prepare('SELECT * FROM Customer WHERE username=:username AND login=:login');
-	$stmt->bindValue(':username', $id, PDO::PARAM_STR);
-	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+	$stmt->bindValue(':username', $username, PDO::PARAM_STR);
+	$stmt->bindValue(':login', $login, PDO::PARAM_STR);
 	$stmt->execute();
 	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	echo $rows;
