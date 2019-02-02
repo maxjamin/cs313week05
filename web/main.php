@@ -10,6 +10,9 @@
 
 <?php 
 
+//Starting session
+session_start();
+
 try
 {
 	$dbUrl = getenv('DATABASE_URL');
@@ -23,28 +26,6 @@ try
 
  	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-
-  	/*
-	$stmt = $db->prepare('SELECT * FROM Artwork');
-	$stmt->execute();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	
-	foreach($rows as $table){
-    	//Print the table name out onto the page.
-    	echo $table['artwork_id'] . " " . $table['price'] . '<br>';
-	}
-	
-	
-	echo 'Test<br/>';
-	$stmt = $db->prepare('SELECT username, login FROM Customer');
-	$stmt->execute();
-	$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-	
-	foreach($rows as $table){
-    	//Print the table name out onto the page.
-    	echo $table['username'] . " " . $table['login'] . '<br>';
-	}*/
 
 }
 catch (PDOException $ex)
@@ -78,12 +59,10 @@ catch (PDOException $ex)
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 		foreach($rows as $table){
-    		//Print the table name out onto the page.
-    		echo $table['username'] . " " . $table['login'] . '<br>';
-    		echo $name . " " . $password . '<br>';
     		if($name === $table['username'] && $password === $table['login'])
     		{
-    			echo 'Test 777';
+    			echo 'Test 777 ' . $table['email'] . " " . $table['user_id'] ;
+
     		}
 		}
 
