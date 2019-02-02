@@ -27,7 +27,7 @@ try
 
 	$stmt = $db->prepare('SELECT * FROM Customer');
 	$stmt->execute();
-	$rows = $stmt->fetchAll(PDO::FETCH_NUM);
+	$rows = $stmt->fetchAll(PDO::FETCH);
 	
 	foreach($rows as $table){
     //Print the table name out onto the page.
