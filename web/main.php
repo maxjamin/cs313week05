@@ -2,6 +2,7 @@
 	//Starting session
 	session_start();
 	$_SESSION["sessionUserName"] = "";
+	$_SESSION["table"] = true;
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,7 +66,7 @@
     			$_SESSION["sessionUserName"] = $table['username'];
     			$_SESSION["sessionUserEmail"]= $table['email'];
     			$_SESSION["sessionUserId"]   = $table['user_id'];
-
+    			$_SESSION["table"] = false;
     		}
 		}
 
@@ -89,19 +90,22 @@
 		}
 	?>
 
-	<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
-		<span class="error"><?php echo $nameError;?></span><br>
-		Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
-		<span class="error"><?php echo $passError;?></span><br>
-		<input type="submit" name="entered" value="submit">
-	
-		<br><br>
-		<div class="container" style="background-color:#f1f1f1">
-    		<button type="button" class="cancelbutton">Cancel</button>
-    		<span class="passwordF">Forgot <a href="#">password?</a></span>
-  		</div>
-	</form>
+	<?php if(isset($_SESSION["table"])) : ?>
+
+		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
+			<span class="error"><?php echo $nameError;?></span><br>
+			Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
+			<span class="error"><?php echo $passError;?></span><br>
+			<input type="submit" name="entered" value="submit">
+		
+			<br><br>
+			<div class="container" style="background-color:#f1f1f1">
+	    		<button type="button" class="cancelbutton">Cancel</button>
+	    		<span class="passwordF">Forgot <a href="#">password?</a></span>
+	  		</div>
+		</form>
+	<?php endif; ?>
 
 
 </body>
