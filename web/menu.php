@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>05 Prove</title>
+<title>Gallery</title>
 	<meta charset="UTF-8">
 	<link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
 </head>
@@ -35,7 +35,7 @@ catch (PDOException $ex)
 }
 
 ?>
-	<h1>05 Prove</h1>
+	<h1>Gallery</h1>
 	<br>
 
 	<div class="navbar">
