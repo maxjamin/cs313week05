@@ -23,8 +23,7 @@ try
 
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   $stmt = $conn->prepare("SELECT username, login FROM Customer");
+   $stmt = $db->prepare("SELECT username, login FROM Customer");
    $stmt->execute();
 
    // set the resulting array to associative
