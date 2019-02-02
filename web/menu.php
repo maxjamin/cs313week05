@@ -62,11 +62,11 @@ catch (PDOException $ex)
     		<td>Name:</td>
    			<td>Description</td>
    			<td>Image:</td>
-   			<td>Artist ID:</td>
+   			<td>Price:</td>
    		</tr>
   		<?php
 		foreach($rows as $table){
-			$image = /artWorkImages/$table['price'];
+			$image = "/artWorkImages/" . $table['price'];
 
 			echo '<tr><td>' .  $table['name'] .
 				 "</td><td>" . $table['description'] .
