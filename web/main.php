@@ -2,7 +2,7 @@
 	//Starting session
 	session_start();
 	$_SESSION["sessionUserName"] = "";
-	$_SESSION["table"] = true;
+	$_SESSION["table"] = "true";
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +66,7 @@
     			$_SESSION["sessionUserName"] = $table['username'];
     			$_SESSION["sessionUserEmail"]= $table['email'];
     			$_SESSION["sessionUserId"]   = $table['user_id'];
-    			$_SESSION["table"] = false;
+    			$_SESSION["table"] = "false";
     		}
 		}
 
@@ -90,7 +90,7 @@
 		}
 	?>
 
-	<?php if($_SESSION["table"] === true) : ?>
+	<?php if($_SESSION["table"] === "true") : ?>
 
 		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
