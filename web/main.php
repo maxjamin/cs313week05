@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>05 Prove</title>
+	<meta charset="UTF-8">
+	<link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
 </head>
 <body>
 <?php 
@@ -67,7 +69,6 @@ catch (PDOException $ex)
 		}
 
 	}
-	echo $_SESSION["sessionUserName"];
 
 ?>
 	<h1>05 Prove</h1>
