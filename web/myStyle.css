@@ -16,6 +16,9 @@
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
+body {
+  background-color: darkblue;
+}
 
 table, th, td {
     border: 1px solid black;
