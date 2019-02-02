@@ -67,6 +67,7 @@ catch (PDOException $ex)
 		}
 
 	}
+	echo $_SESSION["sessionUserName"];
 
 ?>
 	<h1>05 Prove</h1>
