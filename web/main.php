@@ -69,7 +69,7 @@
     			$_SESSION["table"] = 'false';
     		}
 		}
-		if($_SESSION["table"] === 'true')
+		if($_SESSION["table"] === 'true' && $_POST["userNameEntered"] && $_POST["passwordEntered"])
 		{
 			$nameError = "Please enter a real username";
 			$passError = "Please enter a real password";
