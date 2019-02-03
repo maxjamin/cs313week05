@@ -54,7 +54,7 @@ catch (PDOException $ex)
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$name] == $name)
+			if($_SESSION[$name] === $name)
 			{	
 			$_SESSION[$name] = $name;
 			$_SESSION[$name. 'value'] = 1;
