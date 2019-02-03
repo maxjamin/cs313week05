@@ -56,7 +56,7 @@ catch (PDOException $ex)
 			if($_SESSION[$name] === "" )
 			{
 				echo "Test034<br>";
-				$_SESSION[$name] = $_POST["search"];
+				$_SESSION[$name] = "yes";
 				$_SESSION[$amount] = 1;
 
 			}
@@ -65,16 +65,16 @@ catch (PDOException $ex)
 				echo "Test02<br>";
 				$tempVar = $_SESSION[$amount];
 				$_SESSION[$amount] = $tempVar + 1;
-				$_SESSION[$name] = $_POST["search"];
+				//$_SESSION[$name] = $_POST["search"];
 
 			}
 
 		}
-		echo $_SESSION['10000'] . " Test03<br>";
-		echo $_SESSION['10000amount'] . " Test04<br>";
+		echo $_SESSION['10000'] . " Test07<br>";
+		echo $_SESSION['10000amount'] . " Test08<br>";
 
-		echo $_SESSION['2001'] . " Test03<br>";
-		echo $_SESSION['2001amount'] . " Test04<br>";
+		echo $_SESSION['2001'] . " Test09<br>";
+		echo $_SESSION['2001amount'] . " Test10<br>";
 
 
 
