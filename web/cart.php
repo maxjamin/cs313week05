@@ -62,9 +62,9 @@ catch (PDOException $ex)
 		$_SESSION[$_POST['output']] = "";
 
 		//print sessions vars 
-		echo '<pre>';
+		/*echo '<pre>';
 			var_dump($_SESSION);
-		echo '</pre>';		
+		echo '</pre>';	*/	
 
 	?>	
 
