@@ -71,6 +71,10 @@ catch (PDOException $ex)
 			$id = $table['artwork_id'];
 			$names = $table['name'];
 			//"<img src='artWorkImages/weather.jpeg' >"
+			if( $_SESSION[$_POST[$table['name']] === $table['name'])
+			{
+				echo 'TEST01 ' . $table['name'] . '<br>';
+			}
 
 			echo '<tr><td>' .  $table['name'] .
 				"</td><td>" . $table['description'] .
@@ -81,7 +85,7 @@ catch (PDOException $ex)
 				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 					<input value="<?php echo $id;?>" type="hidden" name="search">
 					<input value="<?php echo $names?>" type="hidden" name="output">
-					<input type="submit" name="AddToCart" value="Add to Cart">
+					<input type="submit" name="AddToCart" value="Remove from Cart">
 				</form>
 
 				<?php 
