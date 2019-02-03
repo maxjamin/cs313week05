@@ -50,43 +50,18 @@ catch (PDOException $ex)
 		//$name = $_POST["search"];
 		//$amount = $name . 'amount';
 		echo "Name: " . $_POST["search"] . '<br>';
-		$name = $_POST["search"];
+		$name = $_POST["name"];
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
-	
+
+			$_SESSION[$name] = $_POST["search"];
+		
 		}
 
 
 		echo '<pre>';
 		var_dump($_SESSION);
 		echo '</pre>';
-
-		/*if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
-
-			if($_SESSION[$_POST["search"]] === 'yes')
-			{
-				echo "Test02<br>";
-
-				$amount = $_POST["search"] . 'amount';
-				$tempVar = $_SESSION[$amount];
-				$_SESSION[$amount] = $tempVar + 1;
-
-			}
-			else
-			{
-				echo "Test034<br>";
-				$_SESSION[$_POST["search"]] = "yes";
-				$_SESSION[$_POST["search"] . amount] = 1;
-
-			//}
-
-		}
-		echo $_SESSION['10000'] . " Test07<br>";
-		echo $_SESSION['10000amount'] . " Test08<br>";
-
-		echo $_SESSION['2001'] . " Test09<br>";
-		echo $_SESSION['2001amount'] . " Test10<br>";
-		*/
 
 
 ?>
@@ -123,6 +98,7 @@ catch (PDOException $ex)
 				?>
 				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 					<input value="<?php echo $id;?>" type="hidden" name="search">
+					<input value="<?php echo $name;?>" type="hidden" name="name">
 					<input type="submit" name="AddToCart" value="Add to Cart">
 				</form>
 
