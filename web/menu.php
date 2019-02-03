@@ -35,7 +35,7 @@ catch (PDOException $ex)
 }
 
 		//grab from session to display user
-		if($_SESSION["sessionUserName"] !== "") {
+		if($_SESSION["sessionUserName"]) {
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
