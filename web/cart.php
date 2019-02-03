@@ -55,10 +55,6 @@ catch (PDOException $ex)
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-		//remove From cart 
-		echo $_SESSION[$names];
-
 	?>	
 
 
@@ -98,7 +94,12 @@ catch (PDOException $ex)
 			}
 
 				
-		} ?>
+		} 
+
+		//remove From cart 
+		echo $_SESSION[];
+
+		?>
 
 	</table>
 
