@@ -48,7 +48,6 @@ catch (PDOException $ex)
 
 		//Add To Cart/ add to session variables for cart page
 		echo $_POST["search"]. " test01<br>";
-		static $incr = 0;
 		$name = $_POST["search"];
 		$amount = $name . 'amount';
 
@@ -78,6 +77,7 @@ catch (PDOException $ex)
 		foreach($rows as $table){
 			$tempId = $table['artwork_id'];
 			echo "Tempid " . $tempId . "<br>";
+			echo "Tempid1 " . $_SESSION[$tempId] . "<br>";
 
 			if($_SESSION[$tempId] === $tempId)
 			{
