@@ -94,10 +94,12 @@ catch (PDOException $ex)
 			}
 
 				
-		} 
+		}
+		?>
 
-		//remove From cart 
-		echo $id . " " . $_SESSION[$names];
+		<?php
+			//remove From cart 
+			echo $_POST['search'] . " " . $_POST['output'];
 
 		?>
 
