@@ -50,13 +50,13 @@ catch (PDOException $ex)
 		//$name = $_POST["search"];
 		//$amount = $name . 'amount';
 		echo "Name: " . $_POST["search"] . '<br>';
-		echo "Name: " . $_POST["names"] . '<br>';
+		echo "Name: " . $_POST["output"] . '<br>';
 		//$name = $_POST["name"];
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
 			echo "TEST<br>";
-			$_SESSION[$_POST["names"]] = $_POST["search"];
+			$_SESSION[$_POST["output"]] = $_POST["search"];
 		
 		}
 
@@ -90,6 +90,7 @@ catch (PDOException $ex)
 		foreach($rows as $table){
 			$image = "artWorkImages/" . $table['linktoart'];
 			$id = $table['artwork_id'];
+			$names = $table['name'];
 			//"<img src='artWorkImages/weather.jpeg' >"
 
 			echo '<tr><td>' .  $table['name'] .
@@ -100,7 +101,7 @@ catch (PDOException $ex)
 				?>
 				<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 					<input value="<?php echo $id;?>" type="hidden" name="search">
-					<input value="<?php echo $name;?>" type="hidden" name="names">
+					<input value="<?php echo $names?>" type="hidden" name="output">
 					<input type="submit" name="AddToCart" value="Add to Cart">
 				</form>
 
