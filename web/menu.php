@@ -50,6 +50,7 @@ catch (PDOException $ex)
 		echo $_POST["search"]. " test01<br>";
 		static $incr = 0;
 		$name = $_POST["search"];
+		$amount = $name . 'amount'
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
@@ -57,7 +58,7 @@ catch (PDOException $ex)
 			{
 				echo "Test01";
 				$_SESSION[$name] = $_POST["search"];
-				$_SESSION[$name . 'amount'] = 1;
+				$_SESSION[$amount] = 1;
 
 			}
 			else
@@ -69,7 +70,7 @@ catch (PDOException $ex)
 
 		}
 		echo $_SESSION[$name] . "Test03<br>";
-		echo $_SESSION[$name . 'amount'];
+		echo $_SESSION[$amount] . "Test04<br>";
 
 
 ?>
