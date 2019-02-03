@@ -73,6 +73,9 @@ catch (PDOException $ex)
 		echo $_SESSION['10000'] . " Test03<br>";
 		echo $_SESSION['10000amount'] . " Test04<br>";
 
+		echo $_SESSION['2001'] . " Test03<br>";
+		echo $_SESSION['2001amount'] . " Test04<br>";
+
 
 
 ?>
