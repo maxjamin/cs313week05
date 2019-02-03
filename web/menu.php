@@ -49,24 +49,24 @@ catch (PDOException $ex)
 		//Add To Cart
 		echo $_POST["search"]. "test01<br>";
 		static $incr = 0
+		$name = $_POST["search"]
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$_POST["search"]] === "" )
+			if($_SESSION[$name] === "" )
 			{
-				$_SESSION[$_POST["search"]] = $_POST["search"];
-				$amount = $_POST["search"] . 'amount';
-				$_SESSION[$amount] = 1; 
+				$_SESSION[$name] = $_POST["search"];
+
 			}
 			else
 			{
-				$_SESSION[$_POST["search"]] = $_POST["search"];
+				
 
 			}
 
 		}
-		echo $_SESSION[$_POST["search"]];
-		echo $_SESSION[$_POST["search"] . 'amount'];
+		echo $_SESSION[$name];
+		echo $_SESSION[$name . 'amount'];
 
 
 ?>
