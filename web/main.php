@@ -96,12 +96,14 @@
 		}
 	?>
 
+	<p>Default User: maxer, Password:password </p>
+
 	<?php if($_SESSION["table"] !== 'false') { ?>
 
 		<form id = "table" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 			UserName:<input type="text" placeholder="Enter Username" name="userNameEntered">
 			<span class="error"><?php echo $nameError;?></span><br>
-			Password:<input type="text" placeholder="Enter Password" name="passwordEntered">
+			Password:<input type="password" placeholder="Enter Password" name="passwordEntered">
 			<span class="error"><?php echo $passError;?></span><br>
 			<input type="submit" name="entered" value="submit">
 		
