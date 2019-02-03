@@ -47,24 +47,25 @@ catch (PDOException $ex)
 
 
 		//Add To Cart/ add to session variables for cart page
-		$name = $_POST["search"];
-		$amount = $name . 'amount';
-		echo "Name: " . $name . " Amount: " . $amount . "<br>";
+		//$name = $_POST["search"];
+		//$amount = $name . 'amount';
+		echo "Name: " . $_POST["search"] . '<br>';
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$name])
+			if($_SESSION[$_POST["search"]] === 'yes')
 			{
 				echo "Test02<br>";
+
+				$amount = $_POST["search"] . 'amount';
 				$tempVar = $_SESSION[$amount];
 				$_SESSION[$amount] = $tempVar + 1;
-				//$_SESSION[$name] = $_POST["search"];
 
 			}
 			else
 			{
 				echo "Test034<br>";
-				$_SESSION[$name] = "yes";
+				$_SESSION[$_POST["search"]] = "yes";
 				$_SESSION[$amount] = 1;
 
 			}
