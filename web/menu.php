@@ -57,6 +57,11 @@ catch (PDOException $ex)
 	
 			$_SESSION[$name] = $integer;
 			$_SESSION[$name. 'value'] = 1;
+
+			if($_SESSION[$name] == $integer)
+			{
+				$_SESSION[$name. 'value'] = 2;
+			}
 		}
 
 
