@@ -35,12 +35,12 @@ catch (PDOException $ex)
 }
 
 ?>
-	<h1>Gallery</h1>
+	<h1>Cart</h1>
 	<br>
 
 	<div class="navbar">
 		<a href="main.php">Login</a>
-  		<a href="menu.php">Menu</a>
+  		<a href="menu.php">Gallery</a>
  		<a href="checkout.php">Checkout</a> 
 	</div>
 	<br>
