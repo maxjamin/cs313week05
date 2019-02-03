@@ -103,7 +103,16 @@ catch (PDOException $ex)
 			//remove From cart 
 			$ouputAmount = $_POST["output"] . 'amount';
 
-			echo $_POST['search'] . " " . $_POST['output'] . " " . $ouputAmount;
+			echo $_POST['search'] . " " . $_POST['output'] . " " .$ouputAmount;
+			
+			$_SESSION[$ouputAmount] = "";
+			$_SESSION[$_POST['output']] = "";
+
+
+			//print sessions vars 
+			echo '<pre>';
+				var_dump($_SESSION);
+			echo '</pre>';
 
 
 		?>
