@@ -47,16 +47,26 @@ catch (PDOException $ex)
 
 
 		//Add To Cart
-		echo $_POST["search"];
+		echo $_POST["search"]. "test01<br>";
+		static $incr = 0
 
-		$id = $_POST["search"];
-		$incr = 0;
+		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-		if(!filter_var($id, FILTER_VALIDATE_INT) === false) {
-			$_SESSION[$incr] = $_POST["search"];
+			if($_SESSION[$_POST["search"]] === "" )
+			{
+				$_SESSION[$_POST["search"]] = $_POST["search"];
+				$amount = $_POST["search"] . 'amount';
+				$_SESSION[amount] = 1; 
+			}
+			else
+			{
+				$_SESSION[$_POST["search"]] = $_POST["search"];
+
+			}
 
 		}
-		echo $_SESSION[$incr];
+		echo $_SESSION[$_POST["search"]];
+		echo $_SESSION[$_POST["search"] . 'amount'];
 
 
 ?>
