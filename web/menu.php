@@ -53,7 +53,7 @@ catch (PDOException $ex)
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$_POST["search"]] === 'yes')
+			/*if($_SESSION[$_POST["search"]] === 'yes')
 			{
 				echo "Test02<br>";
 
@@ -63,12 +63,12 @@ catch (PDOException $ex)
 
 			}
 			else
-			{
+			{*/
 				echo "Test034<br>";
 				$_SESSION[$_POST["search"]] = "yes";
 				$_SESSION[$amount] = 1;
 
-			}
+			//}
 
 		}
 		echo $_SESSION['10000'] . " Test07<br>";
