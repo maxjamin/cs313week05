@@ -71,7 +71,8 @@ catch (PDOException $ex)
 			$id = $table['artwork_id'];
 			$names = $table['name'];
 			/*"<img src='artWorkImages/weather.jpeg' >"*/
-			if( $_SESSION[$table['name']] === $table['artwork_id'])
+
+			if( $_SESSION[$table['name']] == $table['artwork_id'])
 			{
 				echo 'TEST01 ' . $table['name'] . '<br>';
 			}
