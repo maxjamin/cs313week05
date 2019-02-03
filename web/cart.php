@@ -73,17 +73,20 @@ catch (PDOException $ex)
 	?>	
 
 
-		<table>
-  		<tr>
-    		<td>Name:</td>
-   			<td>Description</td>
-   			<td>Image:</td>
-   			<td>Price:</td>
-   			<td>Quantity</td>
-   			<td>Add</td>
-   		</tr>
   		<?php
 		foreach($rows as $table){
+
+			?><table>
+  			<tr>
+    			<td>Name:</td>
+   				<td>Description</td>
+   				<td>Image:</td>
+   				<td>Price:</td>
+   				<td>Quantity</td>
+   				<td>Add</td>
+   			</tr><?php
+
+
 			$image = "artWorkImages/" . $table['linktoart'];
 			$id = $table['artwork_id'];
 			$names = $table['name'];
