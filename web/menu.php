@@ -54,6 +54,7 @@ catch (PDOException $ex)
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
+			echo "TEST<br>";
 			$_SESSION[$_POST["name"]] = $_POST["search"];
 		
 		}
