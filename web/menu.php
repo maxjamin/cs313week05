@@ -55,6 +55,7 @@ catch (PDOException $ex)
 
 			if($_SESSION[$name] === "" )
 			{
+				echo "Test01";
 				$_SESSION[$name] = $_POST["search"];
 
 			}
