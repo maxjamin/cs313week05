@@ -58,11 +58,13 @@ catch (PDOException $ex)
 			echo "TEST<br>";
 			if($_SESSION[$_POST["output"]] !== "")
 			{
+				echo "TEST01";
 				$_SESSION[$_POST[$amount]] = 1;
 				$_SESSION[$_POST["output"]] = $_POST["search"];
 			}
 			else
 			{
+				echo "TEST02";
 				$tempVar = $_SESSION[$_POST[$amount]];
 				$tempVar = $tempVar +1;
 				$_SESSION[$_POST[$amount]] = $tempVar;
