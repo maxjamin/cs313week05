@@ -50,10 +50,20 @@ catch (PDOException $ex)
 		//$name = $_POST["search"];
 		//$amount = $name . 'amount';
 		echo "Name: " . $_POST["search"] . '<br>';
+		$name = $_POST["search"];
 
-		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
+		$_SESSION[$name] = "yes";
+		$_SESSION[$name. 'value'] = 1;
 
-			/*if($_SESSION[$_POST["search"]] === 'yes')
+
+
+		echo '<pre>';
+		var_dump($_SESSION);
+		echo '</pre>';
+
+		/*if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
+
+			if($_SESSION[$_POST["search"]] === 'yes')
 			{
 				echo "Test02<br>";
 
@@ -63,7 +73,7 @@ catch (PDOException $ex)
 
 			}
 			else
-			{*/
+			{
 				echo "Test034<br>";
 				$_SESSION[$_POST["search"]] = "yes";
 				$_SESSION[$_POST["search"] . amount] = 1;
@@ -76,7 +86,7 @@ catch (PDOException $ex)
 
 		echo $_SESSION['2001'] . " Test09<br>";
 		echo $_SESSION['2001amount'] . " Test10<br>";
-
+		*/
 
 
 ?>
