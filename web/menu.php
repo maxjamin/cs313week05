@@ -47,9 +47,9 @@ catch (PDOException $ex)
 
 
 		//Add To Cart/ add to session variables for cart page
-		echo $_POST["search"]. " test01<br>";
 		$name = $_POST["search"];
 		$amount = $name . 'amount';
+		echo "Name: " . $name . " Amount: " . $amount . "<br>";
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
