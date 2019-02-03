@@ -51,10 +51,11 @@ catch (PDOException $ex)
 		//$amount = $name . 'amount';
 		echo "Name: " . $_POST["search"] . '<br>';
 		$name = $_POST["search"];
+		$integer = (int)$name;
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 	
-			$_SESSION[$name] = number_format($name);
+			$_SESSION[$name] = integer;
 			$_SESSION[$name. 'value'] = 1;
 		}
 
