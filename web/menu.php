@@ -53,7 +53,7 @@ catch (PDOException $ex)
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$name] === "" )
+			if($_SESSION[$name] !== "yes" )
 			{
 				echo "Test034<br>";
 				$_SESSION[$name] = "yes";
