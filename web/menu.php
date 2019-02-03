@@ -53,19 +53,19 @@ catch (PDOException $ex)
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			if($_SESSION[$name] !== "yes" )
-			{
-				echo "Test034<br>";
-				$_SESSION[$name] = "yes";
-				$_SESSION[$amount] = 1;
-
-			}
-			else
+			if($_SESSION[$name])
 			{
 				echo "Test02<br>";
 				$tempVar = $_SESSION[$amount];
 				$_SESSION[$amount] = $tempVar + 1;
 				//$_SESSION[$name] = $_POST["search"];
+
+			}
+			else
+			{
+				echo "Test034<br>";
+				$_SESSION[$name] = "yes";
+				$_SESSION[$amount] = 1;
 
 			}
 
