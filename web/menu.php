@@ -46,8 +46,8 @@ catch (PDOException $ex)
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-		//Add To Cart
-		echo $_POST["search"]. "test01<br>";
+		//Add To Cart/ add to session variables for cart page
+		echo $_POST["search"]. " test01<br>";
 		static $incr = 0;
 		$name = $_POST["search"];
 
@@ -57,17 +57,18 @@ catch (PDOException $ex)
 			{
 				echo "Test01";
 				$_SESSION[$name] = $_POST["search"];
+				$_SESSION[$name . 'amount'] = 1;
 
 			}
 			else
 			{
 				echo "Test02";
-				
+
 
 			}
 
 		}
-		echo $_SESSION[$name];
+		echo $_SESSION[$name] . "Test03<br>";
 		echo $_SESSION[$name . 'amount'];
 
 
