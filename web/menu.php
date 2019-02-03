@@ -59,15 +59,15 @@ catch (PDOException $ex)
 			if($_SESSION[$_POST["output"]] !== $_POST["search"])
 			{
 				echo "TEST01";
-				$_SESSION[$_POST[$amount]] = 1;
+				$_SESSION[$amount] = 1;
 				$_SESSION[$_POST["output"]] = $_POST["search"];
 			}
 			else
 			{
 				echo "TEST02";
-				$tempVar = $_SESSION[$_POST[$amount]];
+				$tempVar = $_SESSION[$amount];
 				$tempVar = $tempVar +1;
-				$_SESSION[$_POST[$amount]] = $tempVar;
+				$_SESSION[$amount] = $tempVar;
 			}
 
 		}
