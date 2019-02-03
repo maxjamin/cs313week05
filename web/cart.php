@@ -75,11 +75,7 @@ catch (PDOException $ex)
 			if( $_SESSION[$table['name']] == $table['artwork_id'])
 			{
 				$productName = $table['name'];
-				echo '' . $table['name'] . '<br>';
-
-			}
-
-			echo '<tr><td>' .  $table['name'] .
+				echo '<tr><td>' . $table['name'] .
 				"</td><td>" . $table['description'] .
 				"</td><td>" . "<img src=$image width='150' height='150'>" .
 				"</td><td>" . $table['price'] .
@@ -90,9 +86,13 @@ catch (PDOException $ex)
 					<input value="<?php echo $names?>" type="hidden" name="output">
 					<input type="submit" name="AddToCart" value="Remove from Cart">
 				</form>
-
+			
 				<?php 
 				echo '</td></tr>';
+
+			}
+
+				
 		} ?>
 
 	</table>
