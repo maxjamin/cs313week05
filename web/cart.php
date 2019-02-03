@@ -96,15 +96,14 @@ catch (PDOException $ex)
 				
 		}
 		?>
+		</table>
 
 		<?php
+
 			//remove From cart 
 			echo $_POST['search'] . " " . $_POST['output'];
 
 		?>
-
-	</table>
-
 
 
 
