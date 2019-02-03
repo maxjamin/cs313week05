@@ -56,7 +56,7 @@ catch (PDOException $ex)
 			{
 				$_SESSION[$_POST["search"]] = $_POST["search"];
 				$amount = $_POST["search"] . 'amount';
-				$_SESSION[amount] = 1; 
+				$_SESSION[$amount] = 1; 
 			}
 			else
 			{
