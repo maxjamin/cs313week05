@@ -70,8 +70,8 @@ catch (PDOException $ex)
 			$image = "artWorkImages/" . $table['linktoart'];
 			$id = $table['artwork_id'];
 			$names = $table['name'];
-			//"<img src='artWorkImages/weather.jpeg' >"
-			if( $_SESSION[$_POST[$table['name']] === $table['name'])
+			/*"<img src='artWorkImages/weather.jpeg' >"*/
+			if( $_SESSION[$table['name']] === $table['artwork_id'])
 			{
 				echo 'TEST01 ' . $table['name'] . '<br>';
 			}
