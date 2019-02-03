@@ -74,6 +74,17 @@ catch (PDOException $ex)
 		echo $_SESSION[$amount] . " Test04<br>";
 
 
+		foreach($rows as $table){
+			$tempId = $table['artwork_id'];
+
+			if($_SESSION[$tempId] !== "")
+			{
+				echo $_SESSION[$tempId];
+			}
+
+		}
+
+
 ?>
 	<h1>Gallery</h1>
 	<br>
