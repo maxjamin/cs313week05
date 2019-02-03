@@ -54,6 +54,11 @@ catch (PDOException $ex)
 		$stmt = $db->prepare('SELECT * FROM Artwork');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+		//remove From cart 
+		echo $_SESSION[$names];
+
 	?>	
 
 
