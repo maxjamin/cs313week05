@@ -66,7 +66,7 @@ catch (PDOException $ex)
 			{*/
 				echo "Test034<br>";
 				$_SESSION[$_POST["search"]] = "yes";
-				$_SESSION[$amount] = 1;
+				$_SESSION[$_POST["search"] . amount] = 1;
 
 			//}
 
