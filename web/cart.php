@@ -74,7 +74,9 @@ catch (PDOException $ex)
 
 			if( $_SESSION[$table['name']] == $table['artwork_id'])
 			{
-				echo 'TEST01 ' . $table['name'] . '<br>';
+				$productName = $table['name'];
+				echo '' . $table['name'] . '<br>';
+
 			}
 
 			echo '<tr><td>' .  $table['name'] .
