@@ -95,11 +95,6 @@ catch (PDOException $ex)
 
 				
 		}
-		?>
-		</table>
-
-		<?php
-
 			//remove From cart 
 			$ouputAmount = $_POST["output"] . 'amount';
 
@@ -114,12 +109,8 @@ catch (PDOException $ex)
 				var_dump($_SESSION);
 			echo '</pre>';
 
-
 		?>
-
-
-
-
+		</table>
 
 
 </body>
