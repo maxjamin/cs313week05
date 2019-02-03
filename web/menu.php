@@ -66,6 +66,7 @@ catch (PDOException $ex)
 				echo "Test02<br>";
 				$tempVar = $_SESSION[$amount];
 				$_SESSION[$amount] = $tempVar + 1;
+				$_SESSION[$name] = $_POST["search"];
 
 			}
 
