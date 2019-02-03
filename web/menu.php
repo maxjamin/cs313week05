@@ -52,9 +52,11 @@ catch (PDOException $ex)
 		echo "Name: " . $_POST["search"] . '<br>';
 		$name = $_POST["search"];
 
-		$_SESSION[$name] = $name;
-		$_SESSION[$name. 'value'] = 1;
+		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
+			$_SESSION[$name] = $name;
+			$_SESSION[$name. 'value'] = 1;
+		}
 
 
 		echo '<pre>';
