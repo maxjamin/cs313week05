@@ -52,7 +52,7 @@ catch (PDOException $ex)
 		echo "Name: " . $_POST["search"] . '<br>';
 		$name = $_POST["search"];
 
-		$_SESSION[$name] = "yes";
+		$_SESSION[$name] = true;
 		$_SESSION[$name. 'value'] = 1;
 
 
