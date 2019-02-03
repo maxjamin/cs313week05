@@ -97,7 +97,7 @@ catch (PDOException $ex)
 		} 
 
 		//remove From cart 
-		echo $_SESSION[];
+		echo $_SESSION[$names];
 
 		?>
 
