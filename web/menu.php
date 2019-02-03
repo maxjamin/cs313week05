@@ -50,11 +50,11 @@ catch (PDOException $ex)
 		//$name = $_POST["search"];
 		//$amount = $name . 'amount';
 		echo "Name: " . $_POST["search"] . '<br>';
-		$name = $_POST["name"];
+		//$name = $_POST["name"];
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
-			$_SESSION[$name] = $_POST["search"];
+			$_SESSION[$_POST["name"]] = $_POST["search"];
 		
 		}
 
