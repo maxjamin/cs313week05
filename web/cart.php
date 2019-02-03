@@ -101,7 +101,10 @@ catch (PDOException $ex)
 		<?php
 
 			//remove From cart 
-			echo $_POST['search'] . " " . $_POST['output'];
+			$ouputAmount = $_POST["output"] . 'amount';
+
+			echo $_POST['search'] . " " . $_POST['output'] . " " . $ouputAmount;
+
 
 		?>
 
