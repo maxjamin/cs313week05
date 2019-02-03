@@ -61,6 +61,7 @@ catch (PDOException $ex)
 			}
 			else
 			{
+				echo "Test02";
 				
 
 			}
