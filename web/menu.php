@@ -34,11 +34,13 @@ catch (PDOException $ex)
   die();
 }
 
+		//grab from session to display user
 		if($_SESSION["sessionUserName"] !== "") {
 			echo "User: " . $_SESSION["sessionUserName"] . '<br>';
 			echo "User Email: " . $_SESSION["sessionUserEmail"] . '<br><br>';
 		}
 
+		//grab from pssql to table
 		$stmt = $db->prepare('SELECT * FROM Artwork');
 		$stmt->execute();
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -46,6 +48,15 @@ catch (PDOException $ex)
 
 		//Add To Cart
 		echo $_POST["search"];
+
+		$id = $_POST["search"];
+		$incr = 0;
+
+		if(!filter_var($id, FILTER_VALIDATE_INT) === false) {
+			$_SESSION[$incr] = $_POST["search"];
+
+		}
+		echo $_SESSION[$incr];
 
 
 ?>
