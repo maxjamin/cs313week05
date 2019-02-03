@@ -48,8 +48,8 @@ catch (PDOException $ex)
 
 		//Add To Cart
 		echo $_POST["search"]. "test01<br>";
-		static $incr = 0
-		$name = $_POST["search"]
+		static $incr = 0;
+		$name = $_POST["search"];
 
 		if(!filter_var($_POST["search"], FILTER_VALIDATE_INT) === false) {
 
